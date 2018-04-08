@@ -47,9 +47,9 @@ on data that has been dimensioned by team.
 
   Code Snippet:
 
-      var areaDimension = facts.dimension(function(d){ return d.team; }); 
-      areaDimension.filter('DD');
-      print_filter('areaDimension');
+      var teamDimension = facts.dimension(function(d){ return d.team; }); 
+      teamDimension.filter('DD');
+      print_filter('teamDimension');
       
 This will result in 213 records where the value of team is DD.  Now, let's say that we want to order
 those records by the quantity that was purchased.  Once a filter has been set, it remains in place
@@ -62,4 +62,4 @@ advantage of the team filter and create a secondary index based on the quantity 
           console.log("Transactions for Team DD Ordered by Quantity");
           print_filter('qtyDimension');
           console.log("Top 3 Sales by Quantity for Team D");  
-          print_filter('qtyDimension.top(3)');  _filter('areaDimension');
+          print_filter('qtyDimension.top(3)'); 
