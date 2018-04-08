@@ -1,0 +1,54 @@
+
+<!-- INFO 401 - Crossfilter Tutorials
+     Author:    Kathie Wright
+     Date:      April 5, 2018
+     Purpose:   To illustrate data manipulation using Crossfilter.js.  Please review the tutorial markdown files for
+                additional information-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Crossfilter!</title>
+    <meta name="description" content="A cool thing made with Glitch & Crossfilter">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css"> 
+    
+       <!-- Accesses jQuery and the various script files -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/crossfilter.js"></script>
+    <script src="/data.js"></script>
+    <script src="/print_filter.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Crossfilter Tutorials
+      </h1>
+    </header>
+
+    <main>
+      <p class="bold">Oh hi,</p>
+      <p>This is going to be a playground for working with the crossfilter.js library</p>
+      
+    </main>
+
+    <footer>
+      <a href="https://glitch.com">
+        INFO 401
+      </a>
+    </footer>
+ 
+    <!-- Paste your tutorial code snippets here! -->
+     <script>
+ 
+      var facts = crossfilter(data);
+       //console.log(facts);   //displays facts as a set of objects
+      print_filter('facts');  //displays facts as a set of data
+
+    </script>
+  </body>
+</html>
